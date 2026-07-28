@@ -1,0 +1,5 @@
+body { font-family: system-ui, sans-serif; margin: 2rem; background: #101827; color: #f8fafc; }
+main { max-width: 1000px; margin: auto; }
+.drive { background: #1e293b; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+button { margin-right: .5rem; padding: .5rem .8rem; border-radius: 8px; border: 0; cursor: pointer; }
+pre { background: #020617; padding: 1rem; overflow: auto; }
