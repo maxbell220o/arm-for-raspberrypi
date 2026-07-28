@@ -1,0 +1,21 @@
+[Unit]
+Description=Raspberry Pi CD-Ripper Web-UI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/arm-for-raspberrypi
+Environment=PYTHONPATH=/opt/arm-for-raspberrypi/src
+Environment=ARM_RIPPER_PORT=9090
+Environment=ARM_RIPPER_MUSIC_DIR=/srv/music
+Environment=ARM_RIPPER_STATE_FILE=/var/lib/arm-ripper/state.json
+Environment=ARM_RIPPER_STATIC_DIR=/opt/arm-for-raspberrypi/static
+ExecStart=/usr/bin/python3 -m arm_ripper.server
+Restart=on-failure
+User=pi
+Group=cdrom
+SupplementaryGroups=audio
+
+[Install]
+WantedBy=multi-user.target
