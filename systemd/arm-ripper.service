@@ -8,8 +8,8 @@ Type=simple
 WorkingDirectory=/opt/arm-for-raspberrypi
 Environment=PYTHONPATH=/opt/arm-for-raspberrypi/src
 Environment=ARM_RIPPER_PORT=9090
-Environment=ARM_RIPPER_MUSIC_DIR=/srv/music
-Environment=ARM_RIPPER_STATE_FILE=/var/lib/arm-ripper/state.json
+Environment=ARM_RIPPER_MUSIC_DIR=/mnt/nas/arm/music
+Environment=ARM_RIPPER_STATE_FILE=/mnt/nas/arm/state/state.json
 Environment=ARM_RIPPER_STATIC_DIR=/opt/arm-for-raspberrypi/static
 ExecStart=/usr/bin/python3 -m arm_ripper.server
 Restart=on-failure
